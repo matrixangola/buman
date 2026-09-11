@@ -14,7 +14,7 @@
   if (!body) return;
 
   const WHATSAPP = '351939097476'; // Eli Colles
-  const AI_BACKEND_URL = 'https://SEU-BACKEND-AQUI.com/chat'; // troca pelo URL real do backend Python
+  const AI_BACKEND_URL = 'https://vagrantly-activator-map.ngrok-free.dev/chat'; // troca pelo URL real do backend Python
 
   /* =========================================================
      1) ÁRVORE DE NÓS
@@ -203,7 +203,7 @@
     try {
       const resp = await fetch(AI_BACKEND_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 'true' },
         body: JSON.stringify({ message: text })
       });
       if (!resp.ok) throw new Error('backend error');
