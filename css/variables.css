@@ -1,0 +1,47 @@
+:root{
+  /* Cores */
+  --bg:#1C3A2E;
+  --bg-card:#1F4535;
+  --bg-deep:#122B20;
+  --bg-darker:#0D1F17;
+  --bg-footer:#0A1810;
+
+  --gold:#C9A96E;
+  --gold-light:#E0C898;
+  --cream:#EDE8DF;
+  --text-dim:rgba(237,232,223,0.65);
+  --text-faint:rgba(237,232,223,0.45);
+  --border:rgba(201,169,110,0.18);
+  --border-soft:rgba(201,169,110,0.08);
+
+  --accent-online:#7FD8A1;
+  --accent-alert:#E4573D;
+
+  /* Tipografia */
+  --font-serif:'Cormorant Garamond',serif;
+  --font-sans:'Inter',sans-serif;
+
+  --fs-hero:clamp(2.4rem,6vw,4.2rem);
+  --fs-title:clamp(1.8rem,4vw,2.6rem);
+  --fs-sub:1rem;
+  --fs-body:.95rem;
+
+  /* Espaçamento */
+  --space-xs:.5rem;
+  --space-sm:1rem;
+  --space-md:1.5rem;
+  --space-lg:2.5rem;
+  --space-xl:4rem;
+  --space-2xl:6rem;
+
+  /* Layout */
+  --radius:14px;
+  --radius-lg:18px;
+  --radius-pill:999px;
+  --max-width:1000px;
+
+  /* Transições */
+  --t-fast:.25s ease;
+  --t-mid:.35s ease;
+  --t-slow:.5s ease;
+}
