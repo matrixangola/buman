@@ -74,12 +74,11 @@
     },
 
     kobido_tipo: {
-      msg: '<strong>B.Care · Ritual Kôbido</strong><br><br>Ritual facial japonês que alivia tensão, reduz sinais de stress e devolve leveza ao rosto e ao corpo.<br><br>Qual formato te interessa?',
+      msg: '<strong>B.Care · Ritual Kôbido</strong><br><br>Ritual facial japonês que alivia tensão, reduz sinais de stress e devolve leveza ao rosto e ao corpo.<br><br>Sessão de 1 hora — 49,50€.<br><br>Queres marcar?',
       options: [
-        { label: 'Express — 30 min — 39€',  next: 'pedir_nome', service: 'Kôbido Express · 30 min · 39€' },
-        { label: 'Completa — 40 min — 49€', next: 'pedir_nome', service: 'Kôbido Completa · 40 min · 49€' },
-        { label: 'Ao domicílio — 69€',      next: 'pedir_nome', service: 'Kôbido ao Domicílio · 69€' },
-        { label: 'Voltar',                   next: 'inicio' }
+        { label: 'Sim, quero marcar', next: 'pedir_nome', service: 'Kôbido · 1 hora · 49,50€' },
+        { label: 'Ver outros serviços', next: 'servicos_todos' },
+        { label: 'Voltar',              next: 'inicio' }
       ]
     },
 
@@ -107,7 +106,7 @@
         { label: 'B.Quick — 19€',       next: 'bquick_info' },
         { label: 'B.Guidance — 29€',    next: 'bguidance_info' },
         { label: 'B.Talk — 29€',        next: 'btalk_info' },
-        { label: 'Kôbido — desde 39€',  next: 'kobido_tipo' }
+        { label: 'Kôbido — 49,50€',     next: 'kobido_tipo' }
       ]
     },
 
@@ -122,7 +121,7 @@
     },
 
     pedir_zona: {
-      msg: 'Qual a tua zona? (necessário para Kôbido ao Domicílio)',
+      msg: 'Qual a tua zona?',
       input: 'zone'
     },
 
@@ -321,11 +320,7 @@
         typing.remove();
 
         if (mode === 'name') {
-          if (state.servico && state.servico.toLowerCase().includes('domicílio')) {
-            goTo('pedir_zona');
-          } else {
-            goTo('pedir_dia');
-          }
+          goTo('pedir_dia');
         } else {
           goTo('resumo');
         }
