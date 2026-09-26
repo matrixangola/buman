@@ -34,49 +34,49 @@
     resolver: {
       msg: 'Certo. A burocracia tem dois níveis. Qual se parece mais contigo?',
       options: [
-        { label: 'Só preciso saber o que fazer (19€)', next: 'bquick_info' },
-        { label: 'Quero que tratem por mim (29€)',     next: 'bguidance_info' },
-        { label: 'Não sei — explica-me',               next: 'resolver_explica' }
+        { label: 'Só preciso saber o que fazer (9€)', next: 'bquick_info' },
+        { label: 'Quero que tratem por mim (19€)',    next: 'bguidance_info' },
+        { label: 'Não sei — explica-me',              next: 'resolver_explica' }
       ]
     },
 
     resolver_explica: {
-      msg: 'B.Quick é uma triagem: dizes-me o problema, eu digo-te o que fazer, onde ir e qual o próximo passo (19€).\n\nB.Guidance é serviço completo: trato da papelada do início ao fim, com até 3 contactos por processo (29€).\n\nQual faz mais sentido?',
+      msg: 'B.Quick é uma triagem: dizes-me o problema, eu digo-te o que fazer, onde ir e qual o próximo passo (9€).\n\nB.Guidance é serviço completo: trato da papelada do início ao fim, com até 3 contactos por processo (19€).\n\nQual faz mais sentido?',
       options: [
-        { label: 'B.Quick (19€)',    next: 'bquick_info' },
-        { label: 'B.Guidance (29€)', next: 'bguidance_info' },
+        { label: 'B.Quick (9€)',     next: 'bquick_info' },
+        { label: 'B.Guidance (19€)', next: 'bguidance_info' },
         { label: 'Voltar',           next: 'resolver' }
       ]
     },
 
     bquick_info: {
-      msg: '<strong>B.Quick · Decidir · 19€</strong><br><br>Triagem da situação, definição de prioridades e direcção imediata.<br>1 situação, 1 objectivo.<br><br>Vamos marcar?',
+      msg: '<strong>B.Quick · Decidir · 9€</strong><br><br>Triagem da situação, definição de prioridades e direcção imediata.<br>1 situação, 1 objectivo.<br><br>Vamos marcar?',
       options: [
-        { label: 'Sim, quero marcar',   next: 'pedir_nome', service: 'B.Quick · Decidir · 19€' },
+        { label: 'Sim, quero marcar',   next: 'pedir_nome', service: 'B.Quick · Decidir · 9€' },
         { label: 'Ver outros serviços', next: 'servicos_todos' }
       ]
     },
 
     bguidance_info: {
-      msg: '<strong>B.Guidance · Resolver · 29€</strong><br><br>Tratamento de papelada e processos administrativos do início ao fim.<br>Inclui até 3 trocas de email ou contactos telefónicos por processo.<br><br>Vamos marcar?',
+      msg: '<strong>B.Guidance · Resolver · 19€</strong><br><br>Tratamento de papelada e processos administrativos do início ao fim.<br>Inclui até 3 trocas de email ou contactos telefónicos por processo.<br><br>Vamos marcar?',
       options: [
-        { label: 'Sim, quero marcar',   next: 'pedir_nome', service: 'B.Guidance · Resolver · 29€' },
+        { label: 'Sim, quero marcar',   next: 'pedir_nome', service: 'B.Guidance · Resolver · 19€' },
         { label: 'Ver outros serviços', next: 'servicos_todos' }
       ]
     },
 
     btalk_info: {
-      msg: '<strong>B.Talk · Desabafar · 29€</strong><br><br>Sessão de 30 minutos para descomprimir, falar e ganhar clareza.<br>Escuta e conversa prática e humana, sem julgamento.<br><br>Não substitui terapia nem acompanhamento psicológico.<br><br>Queres marcar?',
+      msg: '<strong>B.Talk · Desabafar · 19€</strong><br><br>Sessão de 30 minutos para descomprimir, falar e ganhar clareza.<br>Escuta e conversa prática e humana, sem julgamento.<br><br>Não substitui terapia nem acompanhamento psicológico.<br><br>Queres marcar?',
       options: [
-        { label: 'Sim, quero marcar',   next: 'pedir_nome', service: 'B.Talk · Desabafar · 29€' },
+        { label: 'Sim, quero marcar',   next: 'pedir_nome', service: 'B.Talk · Desabafar · 19€' },
         { label: 'Ver outros serviços', next: 'servicos_todos' }
       ]
     },
 
     kobido_tipo: {
-      msg: '<strong>B.Care · Ritual Kôbido</strong><br><br>Ritual facial japonês que alivia tensão, reduz sinais de stress e devolve leveza ao rosto e ao corpo.<br><br>Sessão de 1 hora — 49,50€.<br><br>Queres marcar?',
+      msg: '<strong>B.Care · Ritual Kôbido</strong><br><br>Ritual facial japonês que alivia tensão, reduz sinais de stress e devolve leveza ao rosto e ao corpo.<br><br>Sessão de 1 hora — 39,50€.<br><br>Queres marcar?',
       options: [
-        { label: 'Sim, quero marcar', next: 'pedir_nome', service: 'Kôbido · 1 hora · 49,50€' },
+        { label: 'Sim, quero marcar',   next: 'pedir_nome', service: 'Kôbido · 1 hora · 39,50€' },
         { label: 'Ver outros serviços', next: 'servicos_todos' },
         { label: 'Voltar',              next: 'inicio' }
       ]
@@ -103,10 +103,10 @@
     servicos_todos: {
       msg: 'Estes são todos os serviços disponíveis 👇',
       options: [
-        { label: 'B.Quick — 19€',       next: 'bquick_info' },
-        { label: 'B.Guidance — 29€',    next: 'bguidance_info' },
-        { label: 'B.Talk — 29€',        next: 'btalk_info' },
-        { label: 'Kôbido — 49,50€',     next: 'kobido_tipo' }
+        { label: 'B.Quick — 9€',        next: 'bquick_info' },
+        { label: 'B.Guidance — 19€',    next: 'bguidance_info' },
+        { label: 'B.Talk — 19€',        next: 'btalk_info' },
+        { label: 'Kôbido — 39,50€',     next: 'kobido_tipo' }
       ]
     },
 
@@ -303,7 +303,6 @@
   /* =========================================================
      5) TEXTO LIVRE
      ========================================================= */
-  // NOTA: função agora assíncrona para poder aguardar a resposta da IA
   async function handleFreeText(text) {
     addMsg(text, 'user');
 
@@ -331,8 +330,8 @@
     const lower = text.toLowerCase();
     const match = (words) => words.some(w => lower.includes(w));
 
-    if (match(['quick','decidir','19']))                    return goTo('bquick_info');
-    if (match(['guidance','papelada','29']))                return goTo('bguidance_info');
+    if (match(['quick','decidir','9']))                     return goTo('bquick_info');
+    if (match(['guidance','papelada','19']))                return goTo('bguidance_info');
     if (match(['talk','desabafar','conversa','falar']))     return goTo('btalk_info');
     if (match(['kôbido','kobido','cara','rosto','facial'])) return goTo('kobido_tipo');
     if (match(['preço','preco','quanto','custa','valor']))  return goTo('servicos_todos');
@@ -344,7 +343,6 @@
       return;
     }
 
-    // NOVO: pergunta fora do padrão → pede ajuda à IA antes de cair no fallback genérico
     const typing = showTyping();
     const respostaIA = await askAI(text);
     typing.remove();
